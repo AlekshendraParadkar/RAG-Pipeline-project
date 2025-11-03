@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+openai
+qdrant-client
+pypdf
+sentence-transformers
+python-dotenv
+langchain
+qdrant-client
+langchain-groq
+python-dotenv
+Flask>=3.0.0
+flask-cors>=4.0.0
+Flask-JWT-Extended>=4.6.0
+

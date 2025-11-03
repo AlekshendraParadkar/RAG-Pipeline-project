@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title> RAG Chat(by aleks)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen flex items-center bg-blue-100" data-api-base="">
+  <div class="max-w-3xl mx-auto p-4  ">
+    
+    <div>
+      <h1 class="text-2xl font-semibold text-gray-800 mb-4">RAG Chat(by aleks)</h1>
+
+    <div id="auth-card"
+      class="bg-white h-[60vh] flex-col justify-center items-center w-[70vh] shadow rounded-3xl p-4 mb-6 py-20">
+      <div class="flex gap-4 mb-4">
+        <button id="tab-login" class="px-3 py-2 bg-blue-600 text-white rounded-xl">Login</button>
+        <button id="tab-register" class="px-3 py-2 bg-gray-200 text-gray-800 rounded-xl">Register</button>
+      </div>
+
+      <div>
+        <form id="login-form" class="space-y-3">
+          <input id="login-username" type="text" placeholder="Username" class="w-full border rounded p-2" />
+          <input id="login-password" type="password" placeholder="Password" class="w-full border rounded p-2" />
+          <div class=" flex gap-3 items-center justify-center">
+            <button id="login-btn" type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-xl">Login</button>
+            <button id="tab-register" class="px-3 py-2 bg-gray-200 text-gray-800 rounded-xl">Register</button>
+          </div>
+        </form>
+
+        <form id="register-form" class="space-y-3 hidden">
+          <input id="reg-username" type="text" placeholder="Username" class="w-full border rounded p-2" />
+          <input id="reg-password" type="password" placeholder="Password (min 6 chars)"
+            class="w-full border rounded p-2" />
+          <button id="register-btn" type="submit" class="px-4 py-2 bg-green-600 text-white rounded">Create
+            account</button>
+        </form>
+      </div>
+
+      <p id="auth-msg" class="text-sm text-red-600 mt-2"></p>
+    </div>
+    </div>
+
+    <div id="chat-card" class="hidden fixed inset-0 h-screen w-full  flex-col bg-gray-200">
+      <div class="flex items-center  justify-between mb-3">
+        <div class="text-sm text-gray-600 " id="whoami"></div>
+        <button id="logout-btn" class="px-3  bg-blue-300 mt-2   text-gray-800 rounded">Logout</button>
+      </div>
+      <div id="messages" class="h-[80%] overflow-y-auto border rounded p-2 mb-3 bg-gray-100 flex-1"></div>
+      <form id="ask-form" class="flex gap-2 p-3 border-t">
+        <input id="question" type="text" placeholder="Ask a question..." class="flex-1 border rounded p-2" />
+        <button id="ask-btn" type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+
+</html>
